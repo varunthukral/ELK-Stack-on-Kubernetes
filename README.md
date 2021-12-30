@@ -26,6 +26,7 @@ All Yaml file is in manifest folder.
 * Follow the [Getting Started with kubernetes](https://docs.digitalocean.com/products/kubernetes/quickstart/) to set up our cluster. set up min of 3 node cluster
 * Download the kubeconfig file and keep the file in your .kube/config folder
 * Run the following command to check if connection with the cluster is successful and that you have a minimum of three clusters
+
  ![](/images/nodes.PNG)
  
  ![](/images/node_do.PNG)
@@ -75,6 +76,7 @@ Run the elk_stateful.yaml file.
 ~~~
 kubectl create -f elk_statefulset.yaml
 ~~~
+
  ![](/images/elk_statefulset.PNG)
  
   ![](/images/elk_stateful_do.PNG)
@@ -94,6 +96,7 @@ To do so, first forward the local port 9200 to the port 9200 on one of the Elast
 kubectl port-forward elk-cluster-0 9200:9200 --namespace=elk
 ~~~
 ![](/images/portforward_elk.PNG)
+
 ![](/images/restapi_elk.PNG)
 
 This indicates that our Elasticsearch cluster k8s-logs has successfully been created with 3 nodes: elk-cluster-0, elk-cluster-1, and elk-cluster-2
@@ -112,8 +115,11 @@ we set Kibana’s container port to 5601, to which the kibana Service will forwa
 ~~~
 kubectl create -f elk_kibana.yaml
 ~~~
+
 ![](/images/createelk_kibana.PNG)
+
 we can check the rollout by below command
+
 ~~~
 kubectl rollout status deployment/kibana -n elk
 ~~~
