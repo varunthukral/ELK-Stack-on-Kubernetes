@@ -20,7 +20,7 @@
 6. Creating the Fluentd DaemonSet
 
 ### Note
-All Yaml file is in manifest folder.
+All Yaml files are in manifest folder.
 
 ##  Creating and setting up a Kubernetes Cluster in Digital Ocean
 * Follow the [Getting Started with kubernetes](https://docs.digitalocean.com/products/kubernetes/quickstart/) to set up our cluster. set up min of 3 node cluster
